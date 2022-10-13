@@ -1383,18 +1383,17 @@ footer a {
 
     
     .slider {
-        height: 100%;
-        width: 100%;
-    }
-
-    .slider2 {
-        height: 100%;
+        height: 400px;
         width: 100%;
     }
 
     .slide {
         width: 200%;
         height: 100%;
+    }
+
+    .slide2 {
+
     }
 
     .slide img {
