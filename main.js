@@ -40,7 +40,7 @@ indicators.forEach((indicator, i) => {
 indicator.addEventListener('click', () => {
 document.querySelector('.control .selected').classList.remove('selected');
 indicator.classList.add('selected');
-slider.style.transform = 'translateX(' + (i) * -50 + '%)';
+slider.style.transform = 'translateX(' + (i) * -100 + '%)';
 index = i;
 
 });
@@ -50,14 +50,14 @@ prevBtn.addEventListener("click", () => {
 index = (index > 0) ? index - 1 : 0;
 document.querySelector('.control .selected').classList.remove('selected');
 indicatorParent.children[index].classList.add('selected');
-slider.style.transform = 'translateX(' + (index) * -50 + '%)';
+slider.style.transform = 'translateX(' + (index) * -100 + '%)';
 });
 
 nextBtn.addEventListener("click", () => {
   index = (index < 2 - 1) ? index + 1 : 1
 document.querySelector(".control .selected").classList.remove("selected")
 indicatorParent.children[index].classList.add("selected")
-slider.style.transform = "translateX(" + (index) * -50 + "%)"
+slider.style.transform = "translateX(" + (index) * -100 + "%)"
 })
 
 
@@ -79,7 +79,7 @@ indicators2.forEach((indicator2, i) => {
 indicator2.addEventListener('click', () => {
 document.querySelector('.control2 .selected2').classList.remove('selected2');
 indicator2.classList.add('selected2');
-slider2.style.transform = 'translateX(' + (i) * -50 + '%)';
+slider2.style.transform = 'translateX(' + (i) * -100 + '%)';
 index = i;
 
 });
@@ -89,14 +89,14 @@ btnPrev.addEventListener('click', () => {
 index = (index > 0) ? index - 1 : 0;
 document.querySelector('.control2 .selected2').classList.remove('selected2');
 indicatorParent2.children[index].classList.add('selected2');
-slider2.style.transform = 'translateX(' + (index) * -50 + '%)';
+slider2.style.transform = 'translateX(' + (index) * -100 + '%)';
 });
 
 btnNext.addEventListener('click', () => {
 index = (index < 2 - 1) ? index + 1 : 1;
 document.querySelector('.control2 .selected2').classList.remove('selected2');
 indicatorParent2.children[index].classList.add('selected2');
-slider2.style.transform = 'translateX(' + (index) * -50 + '%)';
+slider2.style.transform = 'translateX(' + (index) * -100 + '%)';
 });
 
 

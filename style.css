@@ -1415,6 +1415,10 @@ footer a {
         height: 150px;
     }
 
+    #f4 img {
+        object-position: left;
+    }
+
     /* LOCALISATION */
 
     .retrouvez-nous h1 {
