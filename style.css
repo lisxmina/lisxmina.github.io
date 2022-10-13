@@ -1115,14 +1115,24 @@ footer a {
     }
 
     .slider {
-        height: 500px;
-        width: 400px;
+        height: 650px;
+        width: 600px;
+        
+    }
+    
+    .slide {
+       
+        height: 100%;
+        width: 200%;
+    }
+    
+    .slide img {
+        height: 650px;
+        width: 100%;
+
     }
 
-    .slide img {
-        height: 500px;
-        width: 400px;
-    }
+
 
 
     /* PAGE ATELIER */
@@ -1377,12 +1387,19 @@ footer a {
 
     .slider {
         height: 650px;
-        width: 100%;
+        width: 600px;
+      
     }
-
+    
+    .slide {
+        height: 100%;
+        width: 200%;
+    }
+    
     .slide img {
-        height: 400px;
+        height: 650px;
         width: 100%;
+
     }
 
     .slider-text {
