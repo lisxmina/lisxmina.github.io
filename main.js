@@ -89,14 +89,14 @@ btnPrev.addEventListener('click', () => {
 index = (index > 0) ? index - 1 : 0;
 document.querySelector('.control2 .selected2').classList.remove('selected2');
 indicatorParent2.children[index].classList.add('selected2');
-slider2.style.transform = 'translateX(' + (index) * -200 + '%)';
+slider2.style.transform = 'translateX(' + (index) * -250 + '%)';
 });
 
 btnNext.addEventListener('click', () => {
 index = (index < 2 - 1) ? index + 1 : 1;
 document.querySelector('.control2 .selected2').classList.remove('selected2');
 indicatorParent2.children[index].classList.add('selected2');
-slider2.style.transform = 'translateX(' + (index) * -200 + '%)';
+slider2.style.transform = 'translateX(' + (index) * -250 + '%)';
 });
 
 
