@@ -1,0 +1,1632 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(236, 236, 236);
+
+}
+
+body#homepage-img {
+    background-image: url(/images/homepagedef.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+
+/* BARRE DE NAVIGATION */
+/*/////////////////////////////////////////////////////*/
+
+header {
+    z-index: 1;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.403);
+    backdrop-filter: blur(10px);
+}
+
+header .nav-bar {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px 0 100px;
+}
+
+.nav-bar .nav-logo {
+    display: flex;
+}
+
+.nav-bar .nav-logo img {
+    width: 70px;
+    height: 70px;
+}
+
+.nav-bar .nav-links a {
+    color: black;
+    font-family: 'Epilogue', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.nav-bar .nav-links a:not(:last-child) {
+    margin-right: 40px;
+}
+
+.nav-bar .menu-btn {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 25px;
+}
+
+
+.nav-bar .menu-btn .bars-menu {
+    width: 20px;
+    height: 2px;
+    margin-top: 3px;
+    background-color: black;
+}
+
+.nav-bar .close-btn {
+    position: absolute;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.menu-btn,
+.close-btn {
+    display: none;
+}
+
+
+/* ACCEUIL */
+/*////////////////////////////////////////////////////////*/
+
+.homepage {
+    width: 100%;
+    height: 100vh;
+    margin-bottom: 160px;
+}
+
+.homepage h1 {
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    line-height: 100px;
+    font-family: 'Beth Ellen';
+    font-weight: 400;
+    font-size: 85px;
+    color: #FFFFFF;
+}
+
+.homepage p {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 300;
+    line-height: 20px;
+    color: #FFFFFF;
+}
+
+
+
+/* NOTRE VISION*/
+
+.notre-vision {
+    margin-top: 100px;
+    padding: 0 60px 0 60px;
+}
+
+.notre-vision h1 {
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 60px;
+    color: #90502436;
+}
+
+#carousel-principal {
+    display: grid;
+    grid-template-columns: no-repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 30px;
+}
+
+#slider-principal {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+#text-principal {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.slider {
+    height: 650px;
+    width: 600px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide {
+    display: flex;
+    height: 100%;
+    width: 200%;
+}
+
+.slide img {
+    height: 650px;
+    width: 100%;
+    object-fit: cover;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.control {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0;
+}
+
+.control:hover {
+    opacity: 1;
+}
+
+.control li {
+    display: flex;
+}
+
+.control ul {
+    list-style: none;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin: 0;
+    padding: 0;
+    transform: translate(-50%);
+}
+
+.control ul li {
+    width: 20px;
+    height: 10px;
+    background-color: rgba(148, 148, 148, 0.403);
+    backdrop-filter: blur(10px);
+    border-radius: 3px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.control ul li.selected {
+    background: #90502436;
+}
+
+.prev-btn,
+.next-btn {
+    font-size: 30px;
+    cursor: pointer;
+    background-color: rgba(148, 148, 148, 0.403);
+    backdrop-filter: blur(10px);
+    color: rgba(255, 255, 255, 0.4);
+    padding: 10px;
+}
+
+.slider-text {
+    display: flex;
+    align-items: center;
+}
+
+.slider-text p {
+    color: black;
+    font-family: 'Epilogue', sans-serif;
+    text-align: justify;
+    line-height: 25px;
+    font-size: 15px;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+
+
+/* FRISE HOME PAGE */
+
+.frise {
+    margin-top: 100px;
+    width: 100%;
+    height: 300px;
+}
+
+.frise-image img {
+    object-fit: cover;
+    height: 300px;
+    width: 100%;
+}
+
+.frise-image {
+    height: 300px;
+    display: grid;
+    grid-template-columns: no-repeat(4, 1fr);
+    grid-template-rows: no-repeat(4, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.f1 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.f2 {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.f3 {
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+.f4 {
+    grid-area: 1 / 4 / 2 / 5;
+}
+
+
+/* LOCALISATION */
+
+.retrouvez-nous h1 {
+    font-family: 'Epilogue', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 60px;
+    color: #90502436;
+    margin-left: 60px;
+    margin-top: 100px;
+}
+
+.localisation {
+    display: flex;
+    background: white;
+    width: 100%;
+    height: 300px;
+    margin-bottom: 100px;
+}
+
+.homepage-contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 30px;
+}
+
+.homepage-contacts p,
+a {
+    font-family: 'Beth Ellen';
+    font-weight: 400;
+    font-size: 15px;
+    color: #905024;
+}
+
+#adresse {
+    padding-bottom: 25px;
+    font-size: 20px;
+}
+
+.localisation iframe {
+    height: 300px;
+    width: 50%;
+}
+
+
+/* PAGE ATELIER */
+/*/////////////////////////////////////////////////////////*/
+
+h2 {
+    margin-left: 60px;
+    padding-top: 100px;
+    font-family: 'Epilogue', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 50px;
+    color: #8B8B8B;
+}
+
+.atelier h1 {
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 60px;
+    color: #90502436;
+}
+
+.atelier {
+    margin-top: 100px;
+    padding: 0 60px 0 60px;
+}
+
+
+
+/* EQUIPE PEDAGOGIQUE */
+
+.equipe-pedagogique {
+    margin-right: 60px;
+}
+
+.equipe-pedagogique h2 {
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 60px;
+    color: #90502436;
+}
+
+.presentation {
+    margin-bottom: 50px;
+    height: 420px;
+    width: 100%;
+    left: 0px;
+    background: #FFFFFF;
+    box-shadow: 4px 7px 4px rgba(144, 80, 36, 0.21);
+}
+
+.presentation h3 {
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 30px;
+    color: #90502436;
+
+}
+
+.presentation h3 i {
+    padding-left: 20px;
+    color: #90502436;
+    font-size: 30px;
+}
+
+.equipe {
+    display: flex;
+}
+
+.equipe img {
+    object-fit: cover;
+    height: 420px;
+    width: 300px;
+}
+
+#img-mc {
+    object-position: left;
+}
+
+.equipe-txt {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.equipe-txt p {
+    line-height: 25px;
+    font-size: 15px;
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 300;
+
+}
+
+/* REF GALERIE */
+
+.ref-galerie {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.ref-galerie img {
+    margin: auto;
+    justify-content: center;
+    width: 650px;
+    height: 300px;
+}
+
+.ref-galerie a {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    font-family: 'Beth Ellen';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+
+    color: #905024;
+}
+
+
+/* PAGE COURS */
+/*////////////////////////////////////////////////////*/
+
+.cours {
+    padding-left: 60px;
+    padding-right: 60px;
+    margin-top: 100px;
+}
+
+.cours h1 {
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 60px;
+    color: #90502436;
+
+}
+
+#slider-cours {
+    height: 650px;
+    width: 500px;
+    overflow: hidden;
+    position: relative;
+}
+
+#slide-cours {
+    display: flex;
+    height: 100%;
+    width: 200%;
+}
+
+#slide-cours img {
+    height: 650px;
+    width: 100%;
+    object-fit: cover;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.control2 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0;
+}
+
+.control2:hover {
+    opacity: 1;
+}
+
+.control2 li {
+    display: flex;
+}
+
+.control2 ul {
+    list-style: none;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin: 0;
+    padding: 0;
+    transform: translate(-50%);
+}
+
+.control2 ul li {
+    width: 20px;
+    height: 10px;
+    background-color: rgba(148, 148, 148, 0.403);
+    backdrop-filter: blur(10px);
+    border-radius: 3px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.control2 ul li.selected2 {
+    background: #90502436;
+}
+
+.btn-prev,
+.btn-next {
+    font-size: 30px;
+    cursor: pointer;
+    background-color: rgba(148, 148, 148, 0.403);
+    backdrop-filter: blur(10px);
+    color: rgba(255, 255, 255, 0.4);
+    padding: 10px;
+}
+
+#carousel-cours {
+    display: grid;
+    grid-template-columns: no-repeat(2, 1fr);
+    grid-template-rows: no-repeat(2, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 10px;
+}
+
+#text-cours {
+    display: flex;
+    align-items: baseline;
+}
+
+#slider-cours {
+    grid-area: 1 / 1 / 3 / 2;
+}
+
+#text-cours {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+#tarif {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+/* TARIFS */
+
+.tarif {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tarif .tarif-cours {
+    background: #fff;
+    padding: 15px 15px;
+    position: relative;
+    box-shadow: 4px 7px 4px rgba(144, 80, 36, 0.21);
+    width: 400px;
+}
+
+.tarif-cours .price-section {
+    display: flex;
+    justify-content: center;
+}
+
+.tarif-cours .price-container {
+    height: 120px;
+    width: 120px;
+    padding: 2px;
+}
+
+.price-section .price-container {
+    position: relative;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    line-height: 117px;
+    text-align: center;
+    background: #905024;
+    padding: 2;
+}
+
+.price-container .cercle-price {
+    height: 100%;
+    width: 100%;
+    background: #905024;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+.price-container .cercle-price .text {
+    font-family: 'Epilogue', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    color: white;
+}
+
+.price-container .cercle-price .price {
+    font-family: 'Epilogue', sans-serif;
+    font-size: 40px;
+    color: white;
+}
+
+.tarif-cours .description {
+    width: 100%;
+    height: 2px;
+    background: #90502436;
+    margin: 35px 0;
+    position: relative;
+}
+
+.tarif-cours .description::before {
+    position: absolute;
+    content: "Cours 2h";
+    background: white;
+    padding: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 300;
+}
+
+.tarif-cours .horaire li {
+    margin-bottom: 10px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 300;
+}
+
+.tarif .info {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #90502436;
+    border-radius: 3;
+}
+
+.tarif .info p {
+    font-size: 10px;
+    font-family: 'Epilogue', sans-serif;
+    text-align: center;
+}
+
+/*FRISE*/
+
+#frise-adulte {
+    margin-bottom: 100px;
+}
+
+
+/* NOTRE MISSION/ETHIQUE */
+/*//////////////////////////////////////////////////////////*/
+
+.notre-mission-ethique {
+    padding: 0 60px 0 60px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.notre-mission-ethique h1 {
+    margin-top: 100px;
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 60px;
+    color: #90502436;
+}
+
+.presentation-m-e {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 500px;
+}
+
+.presentation-m-e .images {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.presentation-m-e .images img {
+    object-fit: cover;
+    height: 500px;
+    max-width: 500px;
+
+}
+
+.blur-effect {
+    position: absolute;
+    background-color: rgba(148, 148, 148, 0.403);
+    backdrop-filter: blur(10px);
+    height: 500px;
+    width: 500px;
+}
+
+.text-description {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    max-width: 500px;
+    height: 500px;
+}
+
+.text-description p {
+    line-height: 25px;
+    font-size: 15px;
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 300;
+    padding: 35px;
+}
+
+#img-apprentissage {
+    object-position: left;
+}
+
+#img-partage {
+    width: 500px;
+}
+
+
+
+/* GALERIE */
+/*///////////////////////////////////////////////////////////////*/
+
+.la-galerie {
+    padding: 0 60px 0 60px;
+    margin-top: 100px;
+    position: relative;
+}
+
+.la-galerie img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.la-galerie h1 {
+    margin-top: 100px;
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 60px;
+    color: #90502436;
+}
+
+.galerie-mc {
+    display: grid;
+    grid-template-columns: no-repeat(5, 1fr);
+    grid-template-rows: no-repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width: 100%;
+}
+
+
+.img1 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.img2 {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.img3 {
+    grid-area: 1 / 4 / 2 / 5;
+}
+
+.img4 {
+    grid-area: 1 / 5 / 2 / 6;
+}
+
+.img5 {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.img6 {
+    grid-area: 2 / 3 / 3 / 4;
+}
+
+.img7 {
+    grid-area: 2 / 5 / 3 / 6;
+}
+
+.img8 {
+    grid-area: 3 / 1 / 4 / 3;
+}
+
+.img9 {
+    grid-area: 3 / 4 / 4 / 5;
+}
+
+.img10 {
+    grid-area: 3 / 5 / 4 / 6;
+}
+
+.galerie-juliette {
+    display: grid;
+    grid-template-columns: no-repeat(4, 1fr);
+    grid-template-rows: no-repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.img11 {
+    grid-area: 1 / 1 / 2 / 4;
+}
+
+.img12 {
+    grid-area: 1 / 5 / 2 / 7;
+}
+
+.img13 {
+    grid-area: 2 / 1 / 3 / 3;
+}
+
+.img14 {
+    grid-area: 2 / 3 / 3 / 5;
+}
+
+.img15 {
+    grid-area: 2 / 5 / 3 / 7;
+}
+
+.galerie-claire {
+    display: grid;
+    grid-template-columns: no-repeat(3, 1fr);
+    grid-template-rows: no-repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.img16 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.img17 {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.img18 {
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+.grid-img:hover {
+    transition: 0.5s ease;
+    transform: scale(1.1);
+}
+
+#popup {
+    z-index: 3;
+    transition: 2s ease all;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(236, 236, 236, 0.403);
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+#popup.show-galerie {
+    display: flex;
+}
+
+#popup-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#popup-img {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 700px;
+}
+
+#popup-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+}
+
+#popup-close i {
+    font-size: 30px;
+    color: rgb(216, 216, 216);
+}
+
+
+/* CONTACT */
+/*//////////////////////////////////////////*/
+
+.contact {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    padding: 50px 30px 20px;
+    background: white; 
+    border-radius: 10px;
+    box-shadow: 4px 7px 4px rgba(144, 80, 36, 0.21);
+    position: relative;
+    font-family: 'Epilogue', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.input-element {
+    width: 80%;
+    margin: 30px 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+#submit-error {
+    color: red;
+}
+
+input.invalid {
+    color: red;
+}
+
+.error {
+    margin-top: 5px;
+    display: flex;
+    font-size: 10px;
+    color: red;
+}
+
+.hidden {
+    display: none;
+}
+
+.input-element input, .input-element textarea {  
+    background: transparent;
+    border: 0;
+    outline: 0;
+    padding: 10px 50px 0 0;
+    border-bottom: 1px solid;
+    font-size: 15px;
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 300;
+}
+
+.input-element textarea ::placeholder {
+    font-family: 'Epilogue', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+form button {
+    border-style: none;
+    background: #905024;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 40px;
+    outline: 0;
+    display: block;
+    margin: 30px auto 10px;
+    font-family: 'Epilogue', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.merci  {
+   /* width: 60%;
+    height: 300px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 4px 7px 4px rgba(144, 80, 36, 0.21);*/    
+    font-family: 'Beth Ellen';
+    font-weight: 400;
+    font-size: 25px;
+    color: #905024;
+}
+
+footer {
+    height: 40px;
+    background: #90502436;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    font-family: 'Beth Ellen';
+    font-weight: 400;
+    font-size: 10px;
+    color: white;
+}
+
+footer a {
+    color: white;
+    font-size: 10px;
+}
+
+#last {
+    margin-bottom: 100px;
+}
+
+
+@media only screen and (min-width:700px) and (max-width:1024px) {
+
+    /* BARRE DE NAVIGATION */
+
+    header .nav-bar {
+        padding: 0 20px 0 20px;
+    }
+
+    .nav-bar .nav-links a:not(:last-child) {
+        margin-right: 20px;
+    }
+
+    .nav-bar .nav-links a {
+        font-size: 13px;
+    }
+
+
+    /* ACCEUIL */
+    /*///////////////////////////////////////////////////////////*/
+
+    .homepage {
+        margin-bottom: 0px;
+    }
+
+    .homepage h1 {
+        font-size: 65px;
+        left: 5%;
+        top: 45%;
+    }
+
+    .homepage p {
+        top: 60%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .notre-vision {
+        padding: 0 30px 0 30px;
+    }
+
+    .frise {
+        height: 200px;
+    }
+
+    .frise-image img {
+        height: 200px;
+        width: 100%;
+    }
+
+    .frise-image {
+        height: 200px;
+    }
+
+
+    /* NOTRE VISION */
+
+    .carousel {
+        grid-column-gap: 15px;
+    }
+
+    .slider {
+        height: 500px;
+        width: 400px;
+    }
+
+    .slide img {
+        height: 500px;
+        width: 400px;
+    }
+
+
+    /* PAGE ATELIER */
+    /*/////////////////////////////////////////////////////////*/
+
+    h2 {
+        margin-left: 30px;
+        font-size: 40px;
+    }
+
+    .atelier {
+        padding: 0 30px 0 30px;
+    }
+
+
+    /* EQUIPE PEDAGOGIQUE */
+
+    .equipe-pedagogique {
+        margin-right: 30px;
+    }
+
+    .presentation {
+        height: 650px;
+    }
+
+    .equipe img {
+        width: 300px;
+        height: 650px;
+    }
+
+    .presentation h3 {
+        font-size: 20px;
+    }
+
+    .presentation h3 i {
+        font-size: 20px;
+    }
+
+    .presentation {
+        width: 100%;
+    }
+
+    .equipe-txt p {
+        line-height: 25px;
+    }
+
+    /* LES COURS */
+    /*//////////////////////////////////////////*/
+
+    .cours {
+        padding: 0 30px 0 30px;
+        margin-top: 100px;
+    }
+
+    /* NOTRE MISSION ETHIQUE */
+    /*//////////////////////////////////////////////////////////*/
+
+    .notre-mission-ethique {
+        padding: 0 30px 0 30px;
+    }
+
+    .presentation-m-e .images img {
+        height: 400px;
+        max-width: 320px;
+    }
+
+    .blur-effect {
+        height: 400px;
+        width: 320px;
+    }
+
+    .text-description {
+        max-width: 400px;
+        height: 320px;
+    }
+
+    .presentation-m-e {
+        height: 400px;
+    }
+
+    .presentation-m-e .images img {
+        height: 400px;
+        max-width: 320px;
+    }
+
+    .text-description {
+        max-width: 320px;
+        height: 400px;
+    }
+
+    .text-description p {
+        line-height: 22px;
+        font-size: 10px;
+        font-family: 'Epilogue', sans-serif;
+        padding: 35px;
+    }
+
+    /* LES COURS */
+    /*/////////////////////////////////////////////////////*/
+
+    #carousel-cours {
+        display: grid;
+        grid-template-columns: no-repeat(2, 1fr);
+        grid-template-rows: no-repeat(2, 1fr);
+        grid-column-gap: 30px;
+        grid-row-gap: 30px;
+    }
+
+    #slider-cours {
+        grid-area: 1 / 1 / 2 / 3; 
+        width: 100%;
+        height: 600px;
+    }
+
+    #text-cours {
+        grid-area: 2 / 1 / 3 / 2;
+        display: flex;
+        align-items: center;
+    }
+
+    #tarif {
+        grid-area: 2 / 2 / 3 / 3;
+    }
+
+    .tarif .tarif-cours {
+        width: 90%;
+    }
+
+    /* LA GALERIE */
+    /*//////////////////////////////////////////////////////*/
+
+    .la-galerie {
+        padding: 0 30px 0 30px;
+    }
+
+    #popup-img {
+        object-fit: contain;
+        max-width: 90%;
+        height: 700px;
+    }
+
+    #popup-close i {
+    margin-right: 50px;
+    }
+
+    #popup-close {
+        display: none;
+    }
+}
+
+
+
+
+@media only screen and (max-width:700px) {
+
+    /* BARRE DE NAVIGATION*/
+
+    header .nav-bar {
+        padding: 0 10px 0 10px;
+    }
+
+    .nav-bar .menu-btn {
+        display: block;
+    }
+
+    .nav-bar .close-btn {
+        display: block;
+        margin-right: 5px;
+        right: 0;
+    }
+
+    .nav-menu {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0%;
+        left: 0;
+        display: flex;
+        visibility: hidden;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-menu.show-menu {
+        visibility: visible;
+    }
+
+    .nav-menu .nav-links {
+        z-index: 2;
+        position: relative;
+        display: grid;
+        place-content: center;
+        width: 300px;
+        height: 300px;
+        margin: 20px;
+        background-color: rgba(255, 255, 255, 0.50);
+        backdrop-filter: blur(10px);
+        border-radius: 10px;
+    }
+
+    .nav-menu .nav-links {
+        text-align: justify;
+    }
+
+    .nav-menu .nav-links a {
+        margin: 15px 50px;
+        font-size: 13px;
+    }
+
+
+    /* ACCEUIL */
+    /*///////////////////////////////////////////////////////////*/
+
+    .homepage {
+        margin-bottom: 0px;
+    }
+
+    .homepage h1 {
+        font-size: 40px;
+        left: 5%;
+        top: 45%;
+    }
+
+    .homepage p {
+        top: 70%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* NOTRE VISION */
+
+
+    .notre-vision {
+        margin-top: 50px;
+        padding: 0 10px 0 10px;
+    }
+
+    .notre-vision h1 {
+        font-size: 35px;
+        margin-top: 50px;
+    }
+
+    #carousel-principal {
+        display: block;
+    }
+
+    .slider {
+        height: 400px;
+        width: 100%;
+    }
+
+    .slide img {
+        height: 400px;
+        width: 100%;
+    }
+
+    .slider-text {
+        margin-top: 20px;
+    }
+
+    .control {
+        opacity: 1;
+    }
+
+    .control2 {
+        opacity: 2;
+    }
+
+
+    /* FRISE HOME PAGE */
+
+    .frise {
+        margin-top: 50px;
+        width: 100%;
+        height: 150px;
+    }
+
+    .frise-image img {
+        height: 150px;
+        width: 100%;
+    }
+
+    .frise-image {
+        height: 150px;
+    }
+
+    /* LOCALISATION */
+
+    .retrouvez-nous h1 {
+        margin-left: 10px;
+        font-size: 40px;
+        margin-top: 50px;
+    }
+
+    .localisation {
+        height: 150px;
+    }
+
+    .homepage-contacts {
+        margin-left: 10px;
+    }
+
+    .homepage-contacts p,
+    a {
+        font-size: 10px;
+    }
+
+    #adresse {
+        padding-bottom: 15px;
+        font-size: 10px;
+    }
+
+    .localisation iframe {
+        height: 150px;
+        width: 50%;
+    }
+
+
+
+    /* PAGE ATELIER */
+    /*/////////////////////////////////////////////////////////*/
+
+    .atelier {
+        padding: 0 10px 0 10px;
+        margin-top: 50px;
+    }
+
+    h2 {
+        margin-left: 10px;
+        font-size: 20px;
+    }
+
+    .atelier h1 {
+        font-size: 35px;
+    }
+
+    /* EQUIPE PEDAGOGIQUE */
+
+    .equipe-pedagogique h2 {
+        font-size: 35px;
+        margin-left: 10px;
+    }
+
+    .equipe-pedagogique {
+        margin-right: 10px;
+    }
+
+    .presentation {
+        height: 900px;
+        width: 100%;
+    }
+
+
+    .presentation h3 {
+        font-size: 20px;
+    }
+
+    .presentation h3 i {
+        font-size: 20px;
+    }
+
+    .equipe {
+        display: block;
+    }
+
+    .equipe img {
+        object-fit: cover;
+        height: 200px;
+        width: 100%;
+    }
+
+    #img-juliette,
+    #img-claire {
+        object-position: top;
+    }
+
+    .equipe-txt {
+        padding: 30px;
+    }
+
+    .equipe-txt p {
+        padding-top: 30px;
+        font-size: 15px;
+        font-family: 'Epilogue', sans-serif;
+
+    }
+
+    /* REF GALERIE */
+
+    .ref-galerie img {
+        width: 500px;
+        height: 200px;
+    }
+
+    .ref-galerie a {
+        font-size: 10px;
+    }
+
+
+    /* LES COURS */
+    /*////////////////////////////////////////////////*/
+
+    .cours {
+        padding: 0 10px 0 10px;
+        margin-top: 50px;
+    }
+
+    .cours h1 {
+        font-size: 35px;
+        margin-top: 50px;
+    }
+
+    #carousel-cours {
+        display: block;
+    }
+
+    #slider-cours {
+        width: 100%;
+        height: 100%;
+    }
+
+    #tarif {
+       padding-top: 30px;
+    }
+
+    .tarif .tarif-cours {
+        width: 70%;
+    }
+
+    /* NOTRE MISSION ETHIQUE */
+    /*//////////////////////////////////////////////////////////*/
+
+    .notre-mission-ethique {
+        padding: 0 10px 0 10px;
+        margin-top: 50px;
+    }
+
+    .notre-mission-ethique h1 {
+        font-size: 35px;
+        margin-top: 50px;
+    }
+
+    .presentation-m-e {
+        display: grid;
+        align-items: center;
+        width: 100%;
+        height: 600px;
+    }
+
+    .presentation-m-e .images {
+        display: grid;
+    }
+
+    .presentation-m-e .images img {
+        height: 300px;
+        width: 360px;
+    }
+
+    #img-partage {
+        width: 360px;
+    }
+
+    .blur-effect {
+        height: 300px;
+        width: 360px;
+    }
+
+    .text-description {
+        max-width: 380px;
+        height: 300px;
+    }
+
+    .text-description p {
+        line-height: 20px;
+        font-size: 10px;
+    }
+
+    /* GALERIE*/
+    /*///////////////////////////////////////////////*/
+
+    .la-galerie {
+        padding: 0 10px 0 10px;
+        margin-top: 50px;
+    }
+
+
+    .la-galerie h1 {
+        font-size: 35px;
+        margin-top: 50px;
+    }
+
+    #popup-img {
+        max-width: 80%;
+        height: 100%;
+    }
+
+    #popup-close {
+        display: none;
+    }
+
+    /*CONTACT*/
+    /*/////////////////////////////////////////////*/
+
+    .contact form {
+        max-width: 300px;
+    }
+
+}

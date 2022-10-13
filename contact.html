@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Beth+Ellen&family=Epilogue:wght@300;700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/cf3aaffc3f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+    <title>Contact</title>
+</head>
+<body>
+
+    <header>
+        <nav class="nav-bar">
+
+            <a href="index.html" class="nav-logo"><img src="/images/logo.png" alt=""></a>
+
+            <div class="nav-menu" id="nav-menu">
+
+                <div class="nav-links">
+                    <div class="close-btn" id="close-btn">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                    <a href="atelier.html">L'atelier</a>
+                    <a href="lesCours.html">Les cours</a>
+                    <a href="notreMission.html">Notre mission</a>
+                    <a href="notreEthique.html">Notre éthique</a>
+                    <a href="galerie.html">La galerie</a>
+                    <a href="contact.html">Les contacts</a>
+                </div>
+
+            </div>
+
+            <div class="menu-btn" id="menu-btn">
+                <div class="bars-menu"></div>
+                <div class="bars-menu"></div>
+                <div class="bars-menu"></div>
+            </div>
+
+        </nav>
+    </header>
+
+
+<div class="contact">
+
+    <form action="index.php" method="post">
+    <div class="input-element">
+        <label></label>
+        <input name="name" type="text" placeholder="Ton prénom...">
+        <div class="error hidden">le prénom et nom sont requis</div>
+    </div>
+    
+
+    <div class="input-element">
+        <label></label>
+        <input name="email" type="email" placeholder="Ton email...">
+        <div class="error hidden">l'email est requis</div>
+    </div>
+
+    <div class="input-element">
+        <label></label>
+        <textarea name="message" type="text" rows="7" placeholder="Ton message..."></textarea>
+        <div class="error hidden">le message est requis</div>
+    </div>
+
+    <button>Envoyer</button>
+    <div class="error hidden">veuillez remplir les champs requis</div>
+    </form>
+
+  
+    <div class="merci hidden"><h4>Merci pour votre message</h4></div>
+
+</div>
+
+<footer><p>created by <a href="https://www.instagram.com/lisxmina/">@lisxmina</a></p></footer>
+    
+</body>
+</html>
