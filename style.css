@@ -28,8 +28,7 @@ header {
     position: fixed;
     display: flex;
     justify-content: center;
-    background-color: rgba(255, 255, 255, 0.403);
-    backdrop-filter: blur(10px);
+    background-color: rgb(255, 255, 255);
 }
 
 header .nav-bar {
@@ -727,13 +726,14 @@ h2 {
 
 .blur-effect {
     position: absolute;
-    background-color: rgba(148, 148, 148, 0.403);
-    backdrop-filter: blur(10px);
+    background-color: rgba(188, 188, 188, 0.403);
+    backdrop-filter: blur(20px);
     height: 500px;
     width: 500px;
 }
 
 .text-description {
+    z-index: 4 ;
     position: absolute;
     display: flex;
     align-items: center;
@@ -956,6 +956,7 @@ h2 {
     font-family: 'Epilogue', sans-serif;
     font-size: 15px;
     font-weight: 300;
+    position: fixed;
 }
 
 .input-element {
@@ -1024,7 +1025,7 @@ form button {
     box-shadow: 4px 7px 4px rgba(144, 80, 36, 0.21);*/    
     font-family: 'Beth Ellen';
     font-weight: 400;
-    font-size: 25px;
+    font-size: 40px;
     color: #905024;
 }
 
@@ -1279,6 +1280,12 @@ footer a {
 
     /* BARRE DE NAVIGATION*/
 
+    .nav-bar .nav-logo img {
+        width: 50px;
+        height: 50px;
+    }
+    
+
     header .nav-bar {
         padding: 0 10px 0 10px;
     }
@@ -1317,9 +1324,9 @@ footer a {
         width: 300px;
         height: 300px;
         margin: 20px;
-        background-color: rgba(255, 255, 255, 0.50);
-        backdrop-filter: blur(10px);
+        background-color: rgb(255, 255, 255);
         border-radius: 10px;
+        box-shadow: 5px 10px 3px rgba(0, 0, 0, 0.60);
     }
 
     .nav-menu .nav-links {
@@ -1627,6 +1634,10 @@ footer a {
 
     .contact form {
         max-width: 300px;
+    }
+
+    .merci {
+        font-size: 18px;
     }
 
 }

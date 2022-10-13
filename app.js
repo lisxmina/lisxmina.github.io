@@ -94,25 +94,4 @@ messageInput.addEventListener("input", () => {
 })
 
 
-/*GALERIE */
-
-let gridImg = [...document.getElementsByClassName("grid-img")]
-let popup = document.getElementById("popup")
-let popupImg = document.getElementById("popup-img")
-
-let openPopup = (e) => {
-  let gridImgCliked = e.target.closest(".grid-img")
-  let clickedImg = gridImgCliked.id
-  popup.classList.add("show-galerie")
-  popupImg.src = `/images/${clickedImg}.jpeg`
-}
-
-let closePopup = () => {
-  popup.classList.remove("show-galerie")
-}
-
-gridImg.forEach((el) => el.addEventListener("click", openPopup))
-popupImg.addEventListener("click", (e) => e.stopPropagation())
-popup.addEventListener("click", closePopup)
-
 
