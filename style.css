@@ -11,7 +11,6 @@ body {
 }
 
 body#homepage-img {
-    background-color: rgb(255, 255, 255);
     background-image: url(/images/homepagedef.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -1393,6 +1392,8 @@ footer a {
     }
 
     .slide2 {
+        width: 200%;
+        height: 100%;
 
     }
 
