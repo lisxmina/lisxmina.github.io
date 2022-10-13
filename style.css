@@ -11,7 +11,7 @@ body {
 }
 
 body#homepage-img {
-    background-color: rgb(255, 255, 255);
+    background: rgb(255, 255, 255);
     background-image: url(/images/homepagedef.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -1381,13 +1381,19 @@ footer a {
         display: block;
     }
 
+    
     .slider {
-        height: 400px;
+        height: 100%;
+        width: 100%;
+    }
+
+    .slider2 {
+        height: 100%;
         width: 100%;
     }
 
     .slide {
-        width: 100%;
+        width: 200%;
         height: 100%;
     }
 
