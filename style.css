@@ -158,7 +158,7 @@ header .nav-bar {
     overflow: hidden;
 }
 
-.slide { 
+.slide {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -168,46 +168,46 @@ header .nav-bar {
     transition: transform 1s;
 }
 
-.slide  img {
+.slide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-button{
+button {
     background: none;
     border: none;
 }
 
-button .fas{
+button .fas {
     color: rgba(157, 157, 157, 0.5);
     font-size: 30px;
 }
 
-.btn-slide{
-    position:absolute;
-    top:50%;
+.btn-slide {
+    position: absolute;
+    top: 50%;
     cursor: pointer;
 }
 
-.prev{
+.prev {
     left: 15px;
     transform: translate(-50%, -50%);
 }
 
-.next{
+.next {
     right: 15px;
-    transform: translate(50%, -50%); 
+    transform: translate(50%, -50%);
 }
 
-.dots-container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+.dots-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
-.dot{
+.dot {
     width: 25px;
     height: 5px;
     margin: 15px 5px;
@@ -216,8 +216,71 @@ button .fas{
     cursor: pointer;
 }
 
-.dot.active{
-background: #90502436;
+.dot.show-slide {
+    background: #90502436;
+}
+
+
+.dot {
+    width: 25px;
+    height: 5px;
+    margin: 15px 5px;
+    border-radius: 15px;
+    background: rgba(157, 157, 157, 0.5);
+    cursor: pointer;
+}
+
+.dot2.show-slide {
+    background: #90502436;
+}
+
+.slide2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 1s;
+}
+
+.slide2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+.prev2 {
+    left: 15px;
+    transform: translate(-50%, -50%);
+}
+
+.next2 {
+    right: 15px;
+    transform: translate(50%, -50%);
+}
+
+.dots-container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+.dot2 {
+    width: 25px;
+    height: 5px;
+    margin: 15px 5px;
+    border-radius: 15px;
+    background: rgba(157, 157, 157, 0.5);
+    cursor: pointer;
+}
+
+.dot2.active {
+    background: #90502436;
 }
 
 .slider-text {
@@ -464,23 +527,32 @@ h2 {
 
 }
 
+#carousel-cours {
+    display: grid;
+    grid-template-columns: no-repeat(2, 1fr);
+    grid-template-rows: no-repeat(2, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 0px;
+}
+
 #slider-cours {
     height: 650px;
     width: 500px;
     overflow: hidden;
     position: relative;
-}
-
-
-#slider-cours {
     grid-area: 1 / 1 / 3 / 2;
 }
 
+
 #text-cours {
+    display: flex;
+    align-items: flex-start;
     grid-area: 1 / 2 / 2 / 3;
 }
 
 #tarif {
+    display: flex;
+    justify-content: flex-start;
     grid-area: 2 / 2 / 3 / 3;
 }
 
@@ -644,7 +716,7 @@ h2 {
 }
 
 .text-description {
-    z-index: 1 ;
+    z-index: 1;
     position: absolute;
     display: flex;
     align-items: center;
@@ -860,7 +932,7 @@ h2 {
     width: 100%;
     max-width: 500px;
     padding: 50px 30px 20px;
-    background: white; 
+    background: white;
     border-radius: 10px;
     box-shadow: 4px 7px 4px rgba(144, 80, 36, 0.21);
     position: relative;
@@ -897,7 +969,8 @@ input.invalid {
     display: none;
 }
 
-.input-element input, .input-element textarea {  
+.input-element input,
+.input-element textarea {
     background: transparent;
     border: 0;
     outline: 0;
@@ -928,12 +1001,12 @@ form button {
     font-weight: 300;
 }
 
-.merci  {
-   /* width: 60%;
+.merci {
+    /* width: 60%;
     height: 300px;
     background: white;
     border-radius: 10px;
-    box-shadow: 4px 7px 4px rgba(144, 80, 36, 0.21);*/    
+    box-shadow: 4px 7px 4px rgba(144, 80, 36, 0.21);*/
     font-family: 'Beth Ellen';
     font-weight: 400;
     font-size: 40px;
@@ -1083,6 +1156,49 @@ footer a {
         margin-top: 100px;
     }
 
+    #carousel-cours {
+        display: grid;
+        grid-template-columns: no-repeat(2, 1fr);
+        grid-template-rows: no-repeat(2, 1fr);
+        grid-column-gap: 30px;
+        grid-row-gap: 30px;
+    }
+
+    #slider-cours {
+        grid-area: 1 / 1 / 2 / 3;
+        width: 100%;
+        height: 600px;
+        display: flex;
+        justify-content: center;
+    }
+
+
+    .dots-container {
+        align-items: flex-end
+    }
+
+    .dots-container2 {
+        align-items: flex-end
+    }
+    
+    #dots-display {
+        display: none;
+    }
+
+    #text-cours {
+        grid-area: 2 / 1 / 3 / 2;
+        display: flex;
+        align-items: center;
+    }
+
+    #tarif {
+        grid-area: 2 / 2 / 3 / 3;
+    }
+
+    .tarif .tarif-cours {
+        width: 90%;
+    }
+
     /* NOTRE MISSION ETHIQUE */
     /*//////////////////////////////////////////////////////////*/
 
@@ -1126,36 +1242,6 @@ footer a {
         padding: 35px;
     }
 
-    /* LES COURS */
-    /*/////////////////////////////////////////////////////*/
-
-    #carousel-cours {
-        display: grid;
-        grid-template-columns: no-repeat(2, 1fr);
-        grid-template-rows: no-repeat(2, 1fr);
-        grid-column-gap: 30px;
-        grid-row-gap: 30px;
-    }
-
-    #slider-cours {
-        grid-area: 1 / 1 / 2 / 3; 
-        width: 100%;
-        height: 600px;
-    }
-
-    #text-cours {
-        grid-area: 2 / 1 / 3 / 2;
-        display: flex;
-        align-items: center;
-    }
-
-    #tarif {
-        grid-area: 2 / 2 / 3 / 3;
-    }
-
-    .tarif .tarif-cours {
-        width: 90%;
-    }
 
     /* LA GALERIE */
     /*//////////////////////////////////////////////////////*/
@@ -1171,7 +1257,7 @@ footer a {
     }
 
     #popup-close i {
-    margin-right: 50px;
+        margin-right: 50px;
     }
 
     #popup-close {
@@ -1190,7 +1276,7 @@ footer a {
         width: 50px;
         height: 50px;
     }
-    
+
 
     header .nav-bar {
         padding: 0 10px 0 10px;
@@ -1445,17 +1531,13 @@ footer a {
 
     #slider-cours {
         width: 100%;
-        height: 100%;
-    }
-
-    .slide2 {
-        width: 200%;
-        height: 100%;
-
+        height: 400px;
     }
 
     #tarif {
-       padding-top: 30px;
+        display: flex;
+        justify-content: center;
+        padding-top: 30px;
     }
 
     .tarif .tarif-cours {

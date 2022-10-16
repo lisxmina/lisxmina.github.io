@@ -33,8 +33,8 @@ function Slider() {
   let currentSlide = 0;
 
   const activeDot = function (slide) {
-      document.querySelectorAll('.dot').forEach(dot => dot.classList.remove('active'));
-      document.querySelector(`.dot[data-slide="${slide}"]`).classList.add('active');
+      document.querySelectorAll('.dot').forEach(dot => dot.classList.remove('show-slide'));
+      document.querySelector(`.dot[data-slide="${slide}"]`).classList.add('show-slide');
   };
   activeDot(currentSlide);
 
@@ -73,40 +73,51 @@ Slider();
 
 
 
-/* SLIDER 2 */ 
 
-let btnPrev = document.querySelector('.btn-prev');
-let btnNext = document.querySelector('.btn-next');
 
-let slider2 = document.querySelector('.slide2');
+/*SLIDER 2*/
 
-let indicatorParent2 = document.querySelector('.control2 ul');
-let indicators2 = document.querySelectorAll('.control2 li');
-index = 0;
+function Slider2() {
+  const carouselSlides2 = document.querySelectorAll('.slide2');
+  const btnPrev2 = document.querySelector('.prev2');
+  const btnNext2 = document.querySelector('.next2');
+  const dotsSlide2 = document.querySelector('.dots-container2');
+  let currentSlide2 = 0;
 
-indicators2.forEach((indicator2, i) => {
-indicator2.addEventListener('click', () => {
-document.querySelector('.control2 .selected2').classList.remove('selected2');
-indicator2.classList.add('selected2');
-slider2.style.transform = 'translateX(' + (i) * 100 + '%)';
-index = i;
+  const activeDot2 = function (slide) {
+      document.querySelectorAll('.dot2').forEach(dot => dot.classList.remove('show-slide'));
+      document.querySelector(`.dot2[data-slide="${slide}"]`).classList.add('show-slide');
+  };
+  activeDot2(currentSlide2);
 
+  const changeSlide2 = function (slides) {
+      carouselSlides2.forEach((slide, index) => (slide.style.transform = `translateX(${100 * (index - slides)}%)`));
+  };
+  changeSlide2(currentSlide2);
+
+  btnNext2.addEventListener('click', function () {
+      currentSlide2++; 
+      if (carouselSlides2.length - 1 < currentSlide2) {
+          currentSlide2 = 0;
+      };
+      changeSlide2(currentSlide2);
+      activeDot2(currentSlide2);
 });
-});
+  btnPrev2.addEventListener('click', function () {
+      currentSlide2--;
+      if (0 >= currentSlide2) {
+          currentSlide2 = 0;
+      }; 
+      changeSlide2(currentSlide2);
+      activeDot2(currentSlide2);
+  });
 
-btnPrev.addEventListener('click', () => {
-index = (index > 0) ? index - 1 : 0;
-document.querySelector('.control2 .selected2').classList.remove('selected2');
-indicatorParent2.children[index].classList.add('selected2');
-slider2.style.transform = 'translateX(' + (index) * -100 + '%)';
-});
-
-btnNext.addEventListener('click', () => {
-index = (index < 2 - 1) ? index + 1 : 1;
-document.querySelector('.control2 .selected2').classList.remove('selected2');
-indicatorParent2.children[index].classList.add('selected2');
-slider2.style.transform = 'translateX(' + (index) * -100 + '%)';
-});
-
-
-
+  dotsSlide2.addEventListener('click', function (e) {
+      if (e.target.classList.contains('dot2')) {
+          const slide2 = e.target.dataset.slide;
+          changeSlide2(slide2);
+          activeDot2(slide2);
+      }
+  });
+};
+Slider2();
