@@ -23,10 +23,7 @@ navMenu.addEventListener("click", closeMenu)
 
 
 
-
-
 /*SLIDER*/
-
 
 function Slider() {
   const carouselSlides = document.querySelectorAll('.slide');
