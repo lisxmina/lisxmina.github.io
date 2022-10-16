@@ -40,7 +40,7 @@ indicators.forEach((indicator, i) => {
 indicator.addEventListener('click', () => {
 document.querySelector('.control .selected').classList.remove('selected');
 indicator.classList.add('selected');
-slider.style.transform = 'translateX(' + (i) * 48 + '%)';
+slider.style.transform = 'translateX(' + (i) * -48 + '%)';
 index = i;
 
 });
@@ -57,7 +57,7 @@ nextBtn.addEventListener("click", () => {
   index = (index < 2 - 1) ? index + 1 : 1
 document.querySelector(".control .selected").classList.remove("selected")
 indicatorParent.children[index].classList.add("selected")
-slider.style.transform = "translateX(" + (index) * 0 + "%)"
+slider.style.transform = "translateX(" + (index) * 48 + "%)"
 })
 
 
