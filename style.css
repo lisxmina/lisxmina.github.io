@@ -120,7 +120,6 @@ header .nav-bar {
 }
 
 
-
 /* NOTRE VISION*/
 
 .notre-vision {
@@ -152,79 +151,73 @@ header .nav-bar {
 }
 
 .slider {
-    height: 650px;
-    width: 600px;
-    overflow: hidden;
     position: relative;
-}
-
-.slide {
     display: flex;
-    height: 100%;
-    width: 200%;
-}
-
-.slide img {
+    width: 600px;
     height: 650px;
-    width: 100%;
-    object-fit: cover;
-    justify-content: center;
-    align-items: center;
-    display: flex;
+    overflow: hidden;
 }
 
-.control {
+.slide { 
     position: absolute;
-    top: 0;
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    opacity: 0;
+    justify-content: center;
+    transition: transform 1s;
 }
 
-.control:hover {
-    opacity: 1;
+.slide  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.control li {
-    display: flex;
+button{
+    background: none;
+    border: none;
 }
 
-.control ul {
-    list-style: none;
-    display: flex;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    margin: 0;
-    padding: 0;
-    transform: translate(-50%);
-}
-
-.control ul li {
-    width: 20px;
-    height: 10px;
-    background-color: rgba(148, 148, 148, 0.403);
-    backdrop-filter: blur(10px);
-    border-radius: 3px;
-    margin: 10px;
-    cursor: pointer;
-}
-
-.control ul li.selected {
-    background: #90502436;
-}
-
-.prev-btn,
-.next-btn {
+button .fas{
+    color: rgba(157, 157, 157, 0.5);
     font-size: 30px;
+}
+
+.btn-slide{
+    position:absolute;
+    top:50%;
     cursor: pointer;
-    background-color: rgba(148, 148, 148, 0.403);
-    backdrop-filter: blur(10px);
-    color: rgba(255, 255, 255, 0.4);
-    padding: 10px;
+}
+
+.prev{
+    left: 15px;
+    transform: translate(-50%, -50%);
+}
+
+.next{
+    right: 15px;
+    transform: translate(50%, -50%); 
+}
+
+.dots-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.dot{
+    width: 25px;
+    height: 5px;
+    margin: 15px 5px;
+    border-radius: 15px;
+    background: rgba(157, 157, 157, 0.5);
+    cursor: pointer;
+}
+
+.dot.active{
+background: #90502436;
 }
 
 .slider-text {
@@ -241,7 +234,6 @@ header .nav-bar {
     font-weight: 300;
     font-size: 15px;
 }
-
 
 
 /* FRISE HOME PAGE */
@@ -479,87 +471,6 @@ h2 {
     position: relative;
 }
 
-#slide-cours {
-    display: flex;
-    height: 100%;
-    width: 200%;
-}
-
-#slide-cours img {
-    height: 650px;
-    width: 100%;
-    object-fit: cover;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-}
-
-.control2 {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    opacity: 0;
-}
-
-.control2:hover {
-    opacity: 1;
-}
-
-.control2 li {
-    display: flex;
-}
-
-.control2 ul {
-    list-style: none;
-    display: flex;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    margin: 0;
-    padding: 0;
-    transform: translate(-50%);
-}
-
-.control2 ul li {
-    width: 20px;
-    height: 10px;
-    background-color: rgba(148, 148, 148, 0.403);
-    backdrop-filter: blur(10px);
-    border-radius: 3px;
-    margin: 10px;
-    cursor: pointer;
-}
-
-.control2 ul li.selected2 {
-    background: #90502436;
-}
-
-.btn-prev,
-.btn-next {
-    font-size: 30px;
-    cursor: pointer;
-    background-color: rgba(148, 148, 148, 0.403);
-    backdrop-filter: blur(10px);
-    color: rgba(255, 255, 255, 0.4);
-    padding: 10px;
-}
-
-#carousel-cours {
-    display: grid;
-    grid-template-columns: no-repeat(2, 1fr);
-    grid-template-rows: no-repeat(2, 1fr);
-    grid-column-gap: 30px;
-    grid-row-gap: 10px;
-}
-
-#text-cours {
-    display: flex;
-    align-items: baseline;
-}
 
 #slider-cours {
     grid-area: 1 / 1 / 3 / 2;
@@ -1119,16 +1030,6 @@ footer a {
         width: 400px;
     }
 
-    .slide {
-        height: 100%;
-        width: 100%;
-    }
-
-    .slide img {
-        height: 500px;
-        width: 400px;
-    }
-
 
     /* PAGE ATELIER */
     /*/////////////////////////////////////////////////////////*/
@@ -1380,33 +1281,13 @@ footer a {
         display: block;
     }
 
-    
     .slider {
-        height: 400px;
         width: 100%;
-    }
-
-    .slide {
-        width: 200%;
-        height: 100%;
-    }
-
-   
-    .slide img {
         height: 400px;
-        width: 100%;
     }
 
     .slider-text {
         margin-top: 20px;
-    }
-
-    .control {
-        opacity: 1;
-    }
-
-    .control2 {
-        opacity: 2;
     }
 
 

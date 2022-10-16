@@ -28,38 +28,50 @@ navMenu.addEventListener("click", closeMenu)
 /*SLIDER*/
 
 
-let prevBtn = document.querySelector('.prev-btn');
-let nextBtn = document.querySelector(".next-btn");
-let slider = document.querySelector('.slide');
+function Slider() {
+  const carouselSlides = document.querySelectorAll('.slide');
+  const btnPrev = document.querySelector('.prev');
+  const btnNext = document.querySelector('.next');
+  const dotsSlide = document.querySelector('.dots-container');
+  let currentSlide = 0;
 
-let indicatorParent = document.querySelector('.control ul');
-let indicators = document.querySelectorAll('.control li');
-index = 0;
+  const activeDot = function (slide) {
+      document.querySelectorAll('.dot').forEach(dot => dot.classList.remove('active'));
+      document.querySelector(`.dot[data-slide="${slide}"]`).classList.add('active');
+  };
+  activeDot(currentSlide);
 
-indicators.forEach((indicator, i) => {
-indicator.addEventListener('click', () => {
-document.querySelector('.control .selected').classList.remove('selected');
-indicator.classList.add('selected');
-slider.style.transform = 'translateX(' + (i) * -48 + '%)';
-index = i;
+  const changeSlide = function (slides) {
+      carouselSlides.forEach((slide, index) => (slide.style.transform = `translateX(${100 * (index - slides)}%)`));
+  };
+  changeSlide(currentSlide);
 
+  btnNext.addEventListener('click', function () {
+      currentSlide++; 
+      if (carouselSlides.length - 1 < currentSlide) {
+          currentSlide = 0;
+      };
+      changeSlide(currentSlide);
+      activeDot(currentSlide);
 });
-});
+  btnPrev.addEventListener('click', function () {
+      currentSlide--;
+      if (0 >= currentSlide) {
+          currentSlide = 0;
+      }; 
+      changeSlide(currentSlide);
+      activeDot(currentSlide);
+  });
 
-prevBtn.addEventListener("click", () => {
-index = (index > 0) ? index - 1 : 0;
-document.querySelector('.control .selected').classList.remove('selected');
-indicatorParent.children[index].classList.add('selected');
-slider.style.transform = 'translateX(' + (index) * -48 + '%)';
-});
-
-nextBtn.addEventListener("click", () => {
-  index = (index < 2 - 1) ? index + 1 : 1
-document.querySelector(".control .selected").classList.remove("selected")
-indicatorParent.children[index].classList.add("selected")
-slider.style.transform = "translateX(" + (index) * -48 + "%)"
-})
-
+  dotsSlide.addEventListener('click', function (e) {
+      if (e.target.classList.contains('dot')) {
+          const slide = e.target.dataset.slide;
+          changeSlide(slide);
+          activeDot(slide);
+      }
+  });
+};
+Slider();
 
 
 
