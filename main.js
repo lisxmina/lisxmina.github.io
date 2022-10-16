@@ -50,14 +50,14 @@ prevBtn.addEventListener("click", () => {
 index = (index > 0) ? index - 1 : 0;
 document.querySelector('.control .selected').classList.remove('selected');
 indicatorParent.children[index].classList.add('selected');
-slider.style.transform = 'translateX(' + (index) * -50 + '%)';
+slider.style.transform = 'translateX(' + (index) * 50 + '%)';
 });
 
 nextBtn.addEventListener("click", () => {
   index = (index < 2 - 1) ? index + 1 : 1
 document.querySelector(".control .selected").classList.remove("selected")
 indicatorParent.children[index].classList.add("selected")
-slider.style.transform = "translateX(" + (index) * -50 + "%)"
+slider.style.transform = "translateX(" + (index) * 100 + "%)"
 })
 
 
