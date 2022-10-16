@@ -40,7 +40,7 @@ indicators.forEach((indicator, i) => {
 indicator.addEventListener('click', () => {
 document.querySelector('.control .selected').classList.remove('selected');
 indicator.classList.add('selected');
-slider.style.transform = 'translateX(' + (i) * 50 + '%)';
+slider.style.transform = 'translateX(' + (i) * 48 + '%)';
 index = i;
 
 });
@@ -50,7 +50,7 @@ prevBtn.addEventListener("click", () => {
 index = (index > 0) ? index - 1 : 0;
 document.querySelector('.control .selected').classList.remove('selected');
 indicatorParent.children[index].classList.add('selected');
-slider.style.transform = 'translateX(' + (index) * -50 + '%)';
+slider.style.transform = 'translateX(' + (index) * -48 + '%)';
 });
 
 nextBtn.addEventListener("click", () => {
